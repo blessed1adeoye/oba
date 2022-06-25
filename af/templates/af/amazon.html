@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}AMAZON {% endblock title %}
+
+{% block content %}
+
+
+        <!-- Header-->
+<header>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+
+      {% for  x in carou %}
+        <div class="carousel-item {% if forloop.first %} active {% endif %} ">
+
+              <img src="{{ x.img.url }}" height="450" width="100%" >
+
+        </div>
+      {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</header>
+<br>
+<div class="container ">
+    <div class="row">
+        {% for x in proc %}
+        <div class="col-lg-4 col-sm-6 mb-2">
+            <div class="card h-100">
+                <a href="{{ x.url }}" target="_blank">
+                    <img src="{{ x.img.url }}" height="350" width="500" class="card-img-top" >
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <center><a href="{{ x.url }}" target="_blank">{{ x.name }}</a></center>
+                    </h5>
+                    <p class="card-text">{{ x.paragraph| slice:":200" |safe  }}</p>
+                    <center><a href="{{ x.url }}" class="btn btn-primary mb-2" target="_blank">  {{ x.price }}  &rarr;</a></center>
+                </div>
+            </div>
+        </div>
+       {% endfor %}
+        <br>
+    </div>
+</div>
+<br>
+<hr>
+<hr><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <script type="text/javascript">
+                amzn_assoc_placement = "adunit0";
+                amzn_assoc_search_bar = "true";
+                amzn_assoc_tracking_id = "blessed1adeoy-20";
+                amzn_assoc_search_bar_position = "bottom";
+                amzn_assoc_ad_mode = "search";
+                amzn_assoc_ad_type = "smart";
+                amzn_assoc_marketplace = "amazon";
+                amzn_assoc_region = "US";
+                amzn_assoc_title = "Shop Related Products";
+                amzn_assoc_default_search_phrase = "Apple watches";
+                amzn_assoc_default_category = "All";
+                amzn_assoc_linkid = "a2ed7253c7948324df06a7dc685d77bb";
+            </script>
+            <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+        </div>
+        <div class="col-6">
+            <script type="text/javascript">
+                amzn_assoc_placement = "adunit0";
+                amzn_assoc_search_bar = "true";
+                amzn_assoc_tracking_id = "blessed1adeoy-20";
+                amzn_assoc_search_bar_position = "bottom";
+                amzn_assoc_ad_mode = "search";
+                amzn_assoc_ad_type = "smart";
+                amzn_assoc_marketplace = "amazon";
+                amzn_assoc_region = "US";
+                amzn_assoc_title = "Shop Related Products";
+                amzn_assoc_default_search_phrase = "Treadmills";
+                amzn_assoc_default_category = "All";
+                amzn_assoc_linkid = "4e9b42e3bbfe417afcff53770eae2f79";
+            </script>
+            <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <center>
+        <h3 style="color:blue">ACCESS MORE DIFFERENT PRODUCT FROM AMAZON</h3>
+    </center>
+    <div class="row">
+        <div class="col-lg-10">
+            <script type="text/javascript">
+                amzn_assoc_placement = "adunit0";
+                amzn_assoc_search_bar = "true";
+                amzn_assoc_tracking_id = "blessed1adeoy-20";
+                amzn_assoc_search_bar_position = "bottom";
+                amzn_assoc_ad_mode = "search";
+                amzn_assoc_ad_type = "smart";
+                amzn_assoc_marketplace = "amazon";
+                amzn_assoc_region = "US";
+                amzn_assoc_title = "Shop Related Products";
+                amzn_assoc_default_search_phrase = "Gold";
+                amzn_assoc_default_category = "All";
+                amzn_assoc_linkid = "4e9b42e3bbfe417afcff53770eae2f79";
+            </script>
+            <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+
+        </div>
+    </div>
+</div>
+<br><br><br>
+{% endblock %}
+

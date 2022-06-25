@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %} JUMIA {% endblock title %}
+{% block content %}
+
+        <!-- Header-->
+<header>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+
+      {% for  x in carou %}
+        <div class="carousel-item {% if forloop.first %} active {% endif %} ">
+              <img src="{{ x.img.url }}" height="450" width="100%" >
+        </div>
+      {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</header>
+<br>
+<div class="container ">
+    <div class="row">
+        {% for x in proc %}
+        <div class="col-lg-4 col-sm-6 mb-2">
+            <div class="card h-100">
+                <a href="{{ x.url }}" target="_blank">
+                    <img src="{{ x.img.url }}" height="260" width="450" class="card-img-top" >
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <center><a href="{{ x.url }}" target="_blank">{{ x.name }}</a></center>
+                    </h5>
+                </div>
+            </div>
+        </div>
+       {% endfor %}
+        <br>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+
+        </div>
+        <div class="col-6">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+

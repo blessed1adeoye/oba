@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="BLESSED ADEOYE AFFILIATE AMAZON & JUMIA " />
+    <title> BLESSED ADEOYE | OMOBUWA{% block title %} {% endblock title %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/78.ico' %}" />
+    <link rel="stylesheet" href="{% static 'a/a.css' %}"  />
+    <link rel="stylesheet" href="{% static 'fonts/css/all.css' %}"  />
+
+</head>
+<body>
+
+<script>
+  window.oncontextmenu = function(){
+    alert('CONTACT OMOBUWA BLESSED ADEOYE')
+    return false;
+  }
+</script>
+    <!-- Navigation-->
+
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'af:amazon' %}">
+              <img src="{% static 'img/34.png' %}" height="20">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              </ul>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                <li class="nav-item">
+                  <a class="nav-link {% if navbar == 'amazon' %} active {% endif %}" href="{% url 'af:amazon' %}">
+                      <img height="30" width="50" src="{% static 'img/ama.jpeg' %}">
+                  </a>
+                </li>
+              </ul>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link{% if navbar == 'jumia' %} active {% endif %}" href="{% url 'af:jumia' %}">
+                      <img height="20" src="{% static 'img/jumia.png' %}">
+                  </a>
+                </li>
+              </ul>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                <li class="nav-item">
+                  <a class="nav-link {% if navbar == '' %} active {% endif %}" href="{% url 'af:abo' %}">
+                     <b style="color:gold"> ABOUT BLESSED <i class="fab fa-python"> </i> </b>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+    {% block content %}
+
+    {% endblock content %}
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="container d-md-flex py-4">
+
+              <div class="me-md-auto text-center text-md-start">
+                <div class="copyright text-white">
+                 <p class="m-0 text-center text-white"> &copy; Copyright    <img src="{% static 'img/78.png' %}" >.  <script>document.write(new Date().getFullYear());</script> &amp; Beyond  All Rights Reserved</p>
+                </div>
+              </div>
+              <div class="social-links text-center text-md-end pt-3 pt-md-0 text-white">
+                <a href="https://twitter.com/REALBUAR" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a>
+<!--                <a href="https://facebook.com/realbuar?_rdc=1&_rdr" target="_blank" class="text-white"><i class="fab fa-facebook"></i></a>-->
+                <a href="https://instagram.com/realbuar/" target="_blank" class="text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+<!--    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>-->
+    <script src="{% static 'a/a.js' %}"></script>
+    <!-- Core theme JS-->
+<!--    <script src="{% static 'js/scripts.js' %}"></script>-->
+</body>
+</html>
